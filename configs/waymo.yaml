@@ -1,0 +1,18 @@
+dataroot: /storage/group/4dvlab/datasets/Waymo/Perception_v_1_4_2  # 包含 tfrecord 文件的文件夹
+img_size: [128, 256]  # 图像的高度和宽度
+waymo_size: [1280,1920]
+data:
+  params:
+    train:
+      num_boxes: 70  # 3D 框的最大数量
+      movie_len: 5  # 每个批次的视频帧长度
+      split_name: train  # 数据分割（train/validation/test）
+      return_pose_info: False  # 是否返回姿态信息
+      collect_condition:
+        - 'reference_image'
+        - '3Dbox'
+        - 'actions'
+        - 'text'
+        - 'range_image'
+        - 'HD_map'
+      

@@ -1,0 +1,5 @@
+cfg:
+  version: advanced_12Hz_trainval
+  dataroot: /storage/group/4dvlab/datasets/nuScenes
+  img_size: [384,224]
+  capture_frequency: 6
